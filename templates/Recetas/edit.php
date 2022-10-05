@@ -18,13 +18,15 @@
     </aside>
     <div class="column-responsive column-80">
         <div class="recetas form content">
-            <?= $this->Form->create($receta) ?>
+
+            <?= $this->Form->create($receta, ['type'=>'file']) ?>
+
             <fieldset>
                 <legend><?= __('Edit Receta') ?></legend>
                 <?php
                     echo $this->Form->control('titulo');
                     echo $this->Form->control('descripcion');
-                    echo $this->Form->control('imagen');
+                    echo $this->Form->control('imagen',['type'=>'file', 'required'=>false]);
                 ?>
             </fieldset>
             <?= $this->Form->button(__('Submit')) ?>

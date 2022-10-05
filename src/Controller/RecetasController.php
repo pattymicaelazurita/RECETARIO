@@ -93,7 +93,26 @@ class RecetasController extends AppController
             'contain' => [],
         ]);
         if ($this->request->is(['patch', 'post', 'put'])) {
+
+            $nombreImagenAnterior=$receta->imagen;
+
             $receta = $this->Recetas->patchEntity($receta, $this->request->getData());
+
+            $imagen=$this->request->getData('imagen');
+            $receta->imagen=$nombreImagenAnterior;
+
+            if($imagen->getClientFilename()){
+                if(file_exists(WWW_ROOT.'img\Recetas'.$nombreImagenAnterior)){
+                    unlink(WWW_ROOT.'img\Recetas'.$nombreImagenAnterior);
+                }
+                $tiempo= FrozenTime::now()->toUnixString();
+
+                $nombreImagen=$tiempo."_".$imagen->getClientFileName();
+                $destino=WWW_ROOT.'img\Recetas'.$nombreImagen;
+                $imagen->moveTo($destino);
+                $receta->imagen=$nombreImagen;
+            }
+
             if ($this->Recetas->save($receta)) {
                 $this->Flash->success(__('The receta has been saved.'));
 
