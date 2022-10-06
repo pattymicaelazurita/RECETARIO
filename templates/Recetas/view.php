@@ -7,11 +7,11 @@
 <div class="row">
     <aside class="column">
         <div class="side-nav">
-            <h4 class="heading"><?= __('Actions') ?></h4>
-            <?= $this->Html->link(__('Edit Receta'), ['action' => 'edit', $receta->id], ['class' => 'side-nav-item']) ?>
-            <?= $this->Form->postLink(__('Delete Receta'), ['action' => 'delete', $receta->id], ['confirm' => __('Are you sure you want to delete # {0}?', $receta->id), 'class' => 'side-nav-item']) ?>
-            <?= $this->Html->link(__('List Recetas'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
-            <?= $this->Html->link(__('New Receta'), ['action' => 'add'], ['class' => 'side-nav-item']) ?>
+            <h4 class="heading"><?= __('Opciones') ?></h4>
+            <?= $this->Html->link(__('Editar Receta'), ['action' => 'edit', $receta->id], ['class' => 'side-nav-item']) ?>
+            <?= $this->Form->postLink(__('Eliminar Receta'), ['action' => 'delete', $receta->id], ['confirm' => __('Está seguro que desea eliminar la receta # {0}?', $receta->id), 'class' => 'side-nav-item']) ?>
+            <?= $this->Html->link(__('Lista de Recetas'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
+            <?= $this->Html->link(__('Nueva Receta'), ['action' => 'add'], ['class' => 'side-nav-item']) ?>
         </div>
     </aside>
     <div class="column-responsive column-80">
@@ -19,11 +19,11 @@
             <h3><?= h($receta->id) ?></h3>
             <table>
                 <tr>
-                    <th><?= __('Titulo') ?></th>
+                    <th><?= __('Título') ?></th>
                     <td><?= h($receta->titulo) ?></td>
                 </tr>
                 <tr>
-                    <th><?= __('Descripcion') ?></th>
+                    <th><?= __('Descripción') ?></th>
                     <td><?= h($receta->descripcion) ?></td>
                 </tr>
                 <tr>
@@ -36,11 +36,11 @@
                     <td><?= $this->Number->format($receta->id) ?></td>
                 </tr>
                 <tr>
-                    <th><?= __('Created') ?></th>
+                    <th><?= __('Creación') ?></th>
                     <td><?= h($receta->created) ?></td>
                 </tr>
                 <tr>
-                    <th><?= __('Modified') ?></th>
+                    <th><?= __('Edición') ?></th>
                     <td><?= h($receta->modified) ?></td>
                 </tr>
             </table>
