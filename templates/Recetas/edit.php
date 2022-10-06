@@ -25,8 +25,11 @@
                 <legend><?= __('Edit Receta') ?></legend>
                 <?php
                     echo $this->Form->control('titulo');
-                    echo $this->Form->control('descripcion');
-                    echo $this->Form->control('imagen',['type'=>'file', 'required'=>false]);
+                    echo $this->Form->control('descripcion');?>
+
+                    <?= $this->Html->image('\Recetas'.$receta->imagen, array('width'=>100))?>
+
+                    <?php echo $this->Form->control('imagen',['type'=>'file', 'required'=>false]);
                 ?>
             </fieldset>
             <?= $this->Form->button(__('Submit')) ?>

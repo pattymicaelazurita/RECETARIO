@@ -26,7 +26,9 @@
                     <td><?= $this->Number->format($receta->id) ?></td>
                     <td><?= h($receta->titulo) ?></td>
                     <td><?= h($receta->descripcion) ?></td>
-                    <td><?= h($receta->imagen) ?></td>
+                    <td>
+                        <?= $this->Html->image('\Recetas'.$receta->imagen, array('width'=>100))?>
+                    </td>
                     <td><?= h($receta->created) ?></td>
                     <td><?= h($receta->modified) ?></td>
                     <td class="actions">

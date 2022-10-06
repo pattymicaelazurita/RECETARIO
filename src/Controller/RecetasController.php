@@ -20,7 +20,7 @@ class RecetasController extends AppController
      */
     public function index()
     {
-        $recetas = $this->paginate($this->Recetas);
+        $recetas = $this->paginate($this->Recetas, ['limit'=> 3]);
 
         $this->set(compact('recetas'));
     }
