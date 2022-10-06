@@ -71,11 +71,11 @@ class RecetasController extends AppController
             
             
             if ($this->Recetas->save($receta)) {
-                $this->Flash->success(__('The receta has been saved.'));
+                $this->Flash->success(__('Se ha guardado exitosamente su receta.'));
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('The receta could not be saved. Please, try again.'));
+            $this->Flash->error(__('No se ha podido guardar la receta. Porfavor vuelve a intentarlo.'));
         }
         $this->set(compact('receta'));
     }
@@ -114,11 +114,11 @@ class RecetasController extends AppController
             }
 
             if ($this->Recetas->save($receta)) {
-                $this->Flash->success(__('The receta has been saved.'));
+                $this->Flash->success(__('Se ha guardado su receta.'));
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('The receta could not be saved. Please, try again.'));
+            $this->Flash->error(__('No se ha podido guardar la receta. Porfavor vuelve a intentarlo.'));
         }
         $this->set(compact('receta'));
     }
@@ -140,9 +140,9 @@ class RecetasController extends AppController
         }
 
         if ($this->Recetas->delete($receta)) {
-            $this->Flash->success(__('The receta has been deleted.'));
+            $this->Flash->success(__('Se ha eliminado la receta.'));
         } else {
-            $this->Flash->error(__('The receta could not be deleted. Please, try again.'));
+            $this->Flash->error(__('No se ha podido eleminiar la recta. Porvafor vuelve a intentarlo.'));
         }
 
         return $this->redirect(['action' => 'index']);
