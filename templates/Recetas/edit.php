@@ -24,12 +24,12 @@
             <fieldset>
                 <legend><?= __('Editar Receta') ?></legend>
                 <?php
-                    echo $this->Form->control('Título');
-                    echo $this->Form->control('Descripción');?>
+                    echo $this->Form->control('titulo');
+                    echo $this->Form->control('descripcion');?>
 
                     <?= $this->Html->image('\Recetas'.$receta->imagen, array('width'=>100))?>
 
-                    <?php echo $this->Form->control('Imagen',['type'=>'file', 'required'=>false]);
+                    <?php echo $this->Form->control('imagen',['type'=>'file', 'required'=>false]);
                 ?>
             </fieldset>
             <?= $this->Form->button(__('Guardar cambios')) ?>
