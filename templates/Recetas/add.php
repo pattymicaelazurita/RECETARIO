@@ -19,9 +19,9 @@
             <fieldset>
                 <legend><?= __('Agregar Receta') ?></legend>
                 <?php
-                    echo $this->Form->control('Título');
-                    echo $this->Form->control('Descripción');
-                    echo $this->Form->control('Imagen',['type'=>'file']);
+                    echo $this->Form->control('titulo');
+                    echo $this->Form->control('descripcion');
+                    echo $this->Form->control('imagen',['type'=>'file']);
                 ?>
             </fieldset>
 
