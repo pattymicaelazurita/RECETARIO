@@ -32,7 +32,11 @@
                     <?php echo $this->Form->control('imagen',['type'=>'file', 'required'=>false]);
                 ?>
             </fieldset>
+<<<<<<< HEAD
             <?= $this->Form->button(__('Guardar cambios')) ?>
+=======
+            <?= $this->Form->button(__('Actualizar')) ?>
+>>>>>>> develop
             <?= $this->Form->end() ?>
         </div>
     </div>

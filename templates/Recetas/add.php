@@ -25,7 +25,11 @@
                 ?>
             </fieldset>
 
+<<<<<<< HEAD
             <?= $this->Form->button(__('Cargar')) ?>
+=======
+            <?= $this->Form->button(__('Agregar')) ?>
+>>>>>>> develop
 
             <?= $this->Form->end() ?>
         </div>

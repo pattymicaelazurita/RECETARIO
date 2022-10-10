@@ -11,7 +11,11 @@
             <?= $this->Html->link(__('Editar Receta'), ['action' => 'edit', $receta->id], ['class' => 'side-nav-item']) ?>
             <?= $this->Form->postLink(__('Eliminar Receta'), ['action' => 'delete', $receta->id], ['confirm' => __('Está seguro que desea eliminar la receta # {0}?', $receta->id), 'class' => 'side-nav-item']) ?>
             <?= $this->Html->link(__('Lista de Recetas'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
+<<<<<<< HEAD
             <?= $this->Html->link(__('Agregar Receta'), ['action' => 'add'], ['class' => 'side-nav-item']) ?>
+=======
+            <?= $this->Html->link(__('Nueva Receta'), ['action' => 'add'], ['class' => 'side-nav-item']) ?>
+>>>>>>> develop
         </div>
     </aside>
     <div class="column-responsive column-80">
@@ -36,7 +40,11 @@
                     <td><?= $this->Number->format($receta->id) ?></td>
                 </tr>
                 <tr>
+<<<<<<< HEAD
                     <th><?= __('Creacción') ?></th>
+=======
+                    <th><?= __('Creación') ?></th>
+>>>>>>> develop
                     <td><?= h($receta->created) ?></td>
                 </tr>
                 <tr>
