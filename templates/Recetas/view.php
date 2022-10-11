@@ -40,11 +40,7 @@
                     <td><?= $this->Number->format($receta->id) ?></td>
                 </tr>
                 <tr>
-<<<<<<< HEAD
-                    <th><?= __('Creacción') ?></th>
-=======
                     <th><?= __('Creación') ?></th>
->>>>>>> develop
                     <td><?= h($receta->created) ?></td>
                 </tr>
                 <tr>

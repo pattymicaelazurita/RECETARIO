@@ -5,11 +5,7 @@
  */
 ?>
 <div class="recetas index content">
-<<<<<<< HEAD
-    <?= $this->Html->link(__('Agregar receta'), ['action' => 'add'], ['class' => 'button float-right']) ?>
-=======
     <?= $this->Html->link(__('Nueva Receta'), ['action' => 'add'], ['class' => 'button float-right']) ?>
->>>>>>> develop
     <h3><?= __('Recetas') ?></h3>
     <div class="table-responsive">
         <table>
@@ -18,11 +14,7 @@
                     <th><?= $this->Paginator->sort('id') ?></th>
                     <th><?= $this->Paginator->sort('Título') ?></th>
                     <th><?= $this->Paginator->sort('Descripción') ?></th>
-<<<<<<< HEAD
-                    <th><?= $this->Paginator->sort('Imagen') ?></th>
-=======
                     <th><?= $this->Paginator->sort('imagen') ?></th>
->>>>>>> develop
                     <th><?= $this->Paginator->sort('Creación') ?></th>
                     <th><?= $this->Paginator->sort('Edición') ?></th>
                     <th class="actions"><?= __('Opciones') ?></th>
@@ -51,15 +43,6 @@
     </div>
     <div class="paginator">
         <ul class="pagination">
-<<<<<<< HEAD
-            <?= $this->Paginator->first('<< ' . __('Inicio')) ?>
-            <?= $this->Paginator->prev('< ' . __('Previo')) ?>
-            <?= $this->Paginator->numbers() ?>
-            <?= $this->Paginator->next(__('Siguiente') . ' >') ?>
-            <?= $this->Paginator->last(__('Final') . ' >>') ?>
-        </ul>
-        <p><?= $this->Paginator->counter(__('Página {{page}} de {{pages}}, mostrando {{current}} registro(s) de {{count}}')) ?></p>
-=======
             <?= $this->Paginator->first('<< ' . __('Primero')) ?>
             <?= $this->Paginator->prev('< ' . __('Previo')) ?>
             <?= $this->Paginator->numbers() ?>
@@ -67,6 +50,5 @@
             <?= $this->Paginator->last(__('Último') . ' >>') ?>
         </ul>
         <p><?= $this->Paginator->counter(__('Página {{page}} de {{pages}}, mostrabdo {{current}} record(s) de {{count}}')) ?></p>
->>>>>>> develop
     </div>
 </div>
