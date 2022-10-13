@@ -3,6 +3,11 @@ declare(strict_types=1);
 
 namespace App\Controller;
 
+<<<<<<< HEAD
+=======
+use Cake\Event\EventInterface;
+
+>>>>>>> develop
 /**
  * Users Controller
  *
@@ -102,4 +107,43 @@ class UsersController extends AppController
 
         return $this->redirect(['action' => 'index']);
     }
+<<<<<<< HEAD
 }
+=======
+
+    public function login()
+    {
+        $this->request->allowMethod(['get', 'post']);
+        $result = $this->Authentication->getResult();
+
+        if ($result->isValid()) {
+            $redirect = $this->request->getQuery('redirect', [
+                'controller' => 'Users',
+                'action' => 'index',
+            ]);
+
+            return $this->redirect($redirect);
+        }
+
+        if ($this->request->is('post') && !$result->isValid()) {
+            $this->Flash->error(__('Usuario o clave incorrectos'));
+        }
+    }
+
+    public function beforeFilter(EventInterface $event)
+    {
+        parent::beforeFilter($event);
+        $this->Authentication->addUnauthenticatedActions(['login', 'add']);
+    }
+
+    public function logout()
+    {
+        $result = $this->Authentication->getResult();
+
+        if ($result->isValid()) {
+            $this->Authentication->logout();
+            return $this->redirect(['controller' => 'Users', 'action' => 'login']);
+        }
+    }
+}
+>>>>>>> develop

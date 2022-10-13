@@ -24,8 +24,13 @@ class UsersFixture extends TestFixture
                 'phone_number' => 'Lorem ipsum dolor sit amet',
                 'country_code' => 'Lorem ipsum dolor sit amet',
                 'password' => 'Lorem ipsum dolor sit amet',
+<<<<<<< HEAD
                 'created' => '2022-10-10 18:14:52',
                 'modified' => '2022-10-10 18:14:52',
+=======
+                'created' => '2022-10-13 14:55:09',
+                'modified' => '2022-10-13 14:55:09',
+>>>>>>> develop
             ],
         ];
         parent::init();
